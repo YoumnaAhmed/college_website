@@ -31,8 +31,8 @@ Route::post('/login',[LoginController::class ,'store'])->name('store');
 Route::group(['middleware'=>['auth','disable_back']],function() {
 
     Route::group(['middleware' => 'is_admin', 'prefix' => 'admin/', 'as' => 'admin.'], function () {
-        Route::get('/register',[RegisterController::class ,'index'])->name('admin.register');
-        Route::post('/register',[RegisterController::class ,'store'])->name('admin.new_student');
+        Route::get('/register',[RegisterController::class ,'index'])->name('register');
+        Route::post('/register',[RegisterController::class ,'store'])->name('new_student');
         Route::get('/liststud',[RegisterController::class ,'list'])->name('liststud');
         Route::get('/archive',[RegisterController::class ,'archive'])->name('archive');
         Route::get('/deletestud/{id}',[RegisterController::class ,'delete'])->name('delete');

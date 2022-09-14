@@ -114,7 +114,7 @@
                                             @endforeach
                                         </tbody>
                                     </table>
-                                    <form action="{{route('user.home')}}" method="post">@csrf @method('post') <button class="btn btn-primary btn-user btn-block"> Home </button></form>
+                                    <form action="{{route('admin.home')}}" method="post">@csrf @method('post') <button class="btn btn-primary btn-user btn-block"> Home </button></form>
 
                                 </div>
                             </div>
